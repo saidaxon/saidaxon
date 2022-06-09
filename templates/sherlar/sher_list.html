@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+      
+ {% block content %}
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: blue;
+    }
+    .head_text{
+    color: white;
+  }
+    .card{
+    box-shadow: 0 16px 48px grey;
+}
+</style>
+    <header class="masthead " >
+            <div class="overlay"></div>
+            <div class="container ">
+              <div class="row">
+                <div class=" col-md-8 col-md-10 mx-auto">
+                  <div class="site-heading">
+                    <center><h3 class=" site-heading my-4 mt-3 text-dark"> Assalomu alaykum! </h3>
+                      <p class="text-dark"> Siz ushbu sahifada shoirning 1953-2004- yillar mobaynida yozgan she'rlari bilan tanishasiz
+                      </p>
+                    </center>
+                </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+              </header>
+            <div class="container">
+                <div class="row">
+              <!-- Blog Entries Column -->
+              <div class="col-md-12 mt-3 left">
+                    {% for post in sherlar_list %}
+                <div class="card mb-4" >
+                  <div class="card-body">
+                    <table style="width: 100%;">
+                      <tr>
+                        <td width="60%">
+                          <h2 class="card-title">{{ post.nom }}  </h2>
+                        </td>
+                        <td>
+                          <small>
+                             {{ post.autor }} | {{ post.vaqt}}
+                          </small>
+                        </td>
+                        <td>
+                          <a href="{% url 'sher' post.id  %}" class="btn btn-primary">Batafsil &rarr;</a>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </div>
+                 
+                </div>
+                {% endfor %}
+            </div>
+                
+            </div>
+        </div>
+{%endblock%}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+
+    
+<div class="container">
+
+      
+      <div class="row">
+        <div class="col-md-12 card mb-4  mt-3 left  top">
+          <div class="card-body">
+            <h1>{% block title %} {{ object.nom }} {% endblock title %}</h1>
+            <p class=" text-muted text-right">Muallif: {{ object.autor }}</br> Tarjimon: {{ object.tarjimon}} </p>
+            <p class="card-text ">{{ object.matn | safe}}</p>
+            <p class="card-text text-right">{{ object.vaqt }}</p>
+          </div>
+        </div>
+        
+      </div>
+
+  </div>
+  
+  {% endblock content %}

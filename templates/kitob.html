@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Kitob{% endblock title %}
+{% block content %}
+
+<div id="kitoblar" class="my-5">
+    <div class="container">
+        <div class="row">
+                <div class="col-md-3 mt-3">
+                   <a href="https://n.ziyouz.com/books/uzbek_zamonaviy_sheriyati/Rauf%20Parfi.%20Qaytish.pdf"> <img src="{%static 'images/Qaytish.jpg' %}"  class="img-fluid" alt="banner1"></a>
+
+                </div>
+
+                <div class="col-md-3 mt-3">
+                    <a href="https://n.ziyouz.com/books/uzbek_zamonaviy_sheriyati/Rauf%20Parfi.%20Sakina.pdf"> <img src="{%static 'images/Sakina.png' %}" class="img-fluid" alt="banner1">
+                    </a>
+                </div>
+
+                <div class="col-md-3 mt-3">
+                     <a href="https://n.ziyouz.com/books/uzbek_zamonaviy_sheriyati/Rauf%20Parfi.%20Ko'zlar.pdf"> <img src="{% static 'images/Kozlar.jpg' %}" class="img-fluid" alt="banner1">
+                </a>
+                </div>
+            <div class="col-md-3 mt-3">
+                     <a href="https://n.ziyouz.com/books/uzbek_zamonaviy_sheriyati/Rauf%20Parfi.%20Xotirot.pdf"> <img src="{% static 'images/Xotirot.jpg' %}" class="img-fluid" alt="banner1">
+                </a>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}

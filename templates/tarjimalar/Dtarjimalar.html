@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: #fdfdfd;
+    }
+
+    .head_text{
+    color: white;
+  }
+    .card{
+    box-shadow: 0 16px 48px grey;
+}
+</style>
+
+
+        
+            <div class="container">
+                <div class="row">
+      
+              <!-- Blog Entries Column -->
+              <div class="col-md-12 mt-3 left">
+                    {% for post in dramatiktarjima_list %}
+                <div class="card mb-4" >
+                  <div class="card-body">
+                    <table style="width: 100%;">
+                      <tr>
+                        <td width="60%">
+                          <h2 class="card-title">{{ post.nom }}  </h2>
+                          
+                        </td>
+                        <td>
+                          <small>
+                             Muallif: {{ post.autor }}  | Tarjimon: {{ post.tarjimon }} | {{ post.vaqt}}
+                          </small>
+                        </td>
+                        <td>
+                          <a href="{% url 'dramatik' post.id  %}" class="btn btn-primary">Batafsil &rarr;</a>
+                        </td>
+                      </tr>
+                    </table>
+                  
+                    
+                  </div>
+                 
+                </div>
+                {% endfor %}
+            </div>
+                
+            </div>
+        </div>
+{%endblock%}

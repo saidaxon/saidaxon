@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+
+
+
+<table class="table table-bordered border-primary">
+  <thead>
+  <tr><h3 class="text-center">Qidiruv natijasida asarlarida jami <mark>{{sx}}</mark> marta so'z qo'llanilganligi aniqlandi.<br> Shundan:</h3> </tr>
+    <tr class="table-primary">
+      <th scope="col">She'rlarda</th>
+      <th scope="col">Hikoyalarda</th>
+      <th scope="col">Lavhalarda</th>
+      <th scope="col">Etyudlarda</th>
+        <th scope="col">Maqolalarda</th>
+        <th scope="col">Lirik tarjimalarda</th>
+      <th scope="col">Epik tarjimalarda</th>
+      <th scope="col">Dramatik tarjimalarda</th>
+    </tr>
+  </thead>
+
+
+    <tr class="table-warning">
+        <td> umumiy {{x0}} marta foydalanilgan</td>
+        <td>umumiy {{x1}} marta foydalanilgan</td>
+        <td>umumiy {{x2}} marta foydalanilgan</td>
+        <td>umumiy {{x3}} marta foydalanilgan</td>
+        <td>umumiy {{x4}} marta foydalanilgan</td>
+        <td>umumiy {{x5}} marta foydalanilgan</td>
+        <td>umumiy {{x6}} marta foydalanilgan</td>
+        <td>umumiy {{x7}} marta foydalanilgan</td>
+
+
+    </tr>
+
+
+<tbody>
+
+
+
+<tr>
+  <td>
+{% for i in nsher %}
+       {% if nsher %}
+      <a href="{% url 'sher' i.id  %}">{{ forloop.counter }}.{{i.nom}}</br></a>
+
+    {% endif %}
+ {% endfor %}
+    </td>
+       <td>
+{% for i in nhikoya %}
+       {% if nsher %}
+      <a href="{% url 'hikoya' i.id  %}">{{ forloop.counter }}.{{i.nom}}</br></a>
+
+    {% endif %}
+{% endfor %}
+    </td>
+
+    <td>
+    {% for i in nlavha %}
+
+
+
+    {% if nsher %}
+
+
+
+    <a href="{% url 'lavha' i.id  %}">{{ forloop.counter }}.{{i.nom}}</br></a>
+{% endif %}
+
+
+
+{% endfor %}
+    </td>
+
+    <td>
+        {% for i in netyud %}
+
+
+
+    {% if nsher %}
+
+
+
+    <a href="{% url 'etyud' i.id  %}">{{ forloop.counter }}.{{i.nom}}</br></a>
+{% endif %}
+
+
+
+{% endfor %}
+
+    </td>
+
+    <td>
+
+     {% for i in nmaqola %}
+
+
+
+    {% if nsher %}
+
+
+
+    <a href="{% url 'maqola' i.id  %}">{{ forloop.counter }}.{{i.nom}}</br></a>
+{% endif %}
+
+{% endfor %}
+
+    </td>
+
+    <td>
+        {% for i in ndt %}
+
+
+
+    {% if nsher %}
+
+
+
+    <a href="{% url 'dramatik' i.id  %}">{{ forloop.counter }}.{{i.nom}}</br></a>
+{% endif %}
+
+
+
+{% endfor %}
+
+    </td>
+
+    <td>
+       {% for i in net %}
+
+
+
+    {% if nsher %}
+
+
+
+    <a href="{% url 'epik' i.id  %}">{{ forloop.counter }}.{{i.nom}}</br></a>
+{% endif %}
+
+
+
+{% endfor %}
+
+    </td>
+
+    <td>
+      {% for i in nlt %}
+
+
+
+    {% if nsher %}
+
+
+
+    <a href="{% url 'lirik' i.id  %}">{{ forloop.counter }}.{{i.nom}}</br></a>
+{% endif %}
+
+
+
+{% endfor %}
+
+    </td>
+    </tr>
+
+
+  </tbody>
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+{% endblock content %}
